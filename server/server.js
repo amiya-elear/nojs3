@@ -98,3 +98,10 @@ server.listen(Environment.NODE_SERVER, () => {
   logger.info(`Boilerplate Server is up and running on localhost:${Environment.NODE_SERVER}`);
 });
 
+server.listen(Environment.NODE_SERVER, () => {
+  logger.info(`Boilerplate Server is up and running on localhost:${Environment.NODE_SERVER}`);
+});
+
+server.listen(Environment.NODE_SERVER, () => {
+  logger.info(`Boilerplate Server is up and running on localhost:${Environment.NODE_SERVER}`);
+});

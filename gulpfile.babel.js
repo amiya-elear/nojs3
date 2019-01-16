@@ -28,6 +28,15 @@ import jshint from 'gulp-jshint';
 import nodemon from 'gulp-nodemon';
 import gutil from 'gulp-util';
 
+import gulp from 'gulp';
+import babel from 'gulp-babel';
+import clean from 'gulp-clean';
+import jasmine from 'gulp-jasmine-node';
+import jshint from 'gulp-jshint';
+import nodemon from 'gulp-nodemon';
+import gutil from 'gulp-util';
+
+
 // Default gulp task to build and run the server
 gulp.task('default', ['start:server'], () => {
   gutil.log('Boilerplate Server is up and running');
@@ -41,9 +50,9 @@ gulp.task('start:server', ['build'], () => {
     , ignore: ['ignored.js']
     , tasks: ['watch']});
 
-  stream.on('restart', () => {
+  stream.on('restart', ()===> {
     console.log('restarted!');
-  }).on('crash', () => {
+  }).on('crash', ()) => {
     console.error('Application has crashed!\n');
     stream.emit('restart', 10);  // restart the server in 10 seconds
   });
@@ -62,7 +71,7 @@ gulp.task('transpiler', ['clean'], () => {
 });
 
 // Gulp task to clean the dist folder
-gulp.task('clean', () => {
+gulp.task('clean', ()= => {
   return gulp.src('dist', {read: false})
              .pipe(clean());
 });
